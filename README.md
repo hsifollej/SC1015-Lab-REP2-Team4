@@ -35,6 +35,11 @@ We applied several advanced techniques beyond the typical syllabus to enhance mo
 
 We also performed a hyperparameter grid search to fine-tune model parameters, such as tree depth and the number of estimators for RandomForest, ensuring we achieved the best results. To improve our time series forecasting, we introduced time lag data, providing additional context and making the model more predictive. Lastly, we considered the cyclic nature of hours by converting them into hours_sin and hours_cos, allowing us to represent time more effectively than using simple numerical values.
 
+# Individual Contribution
+Joanna Wu: Intro + Problem definition + Data preparation and cleaning
+Sricharan Bala: Exploratory Data Analysis + Visualisation + ML 
+Travis Tan: ML models + Out of syllabus + Limitations 
+
 # Resources
 Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, 2019.
 
