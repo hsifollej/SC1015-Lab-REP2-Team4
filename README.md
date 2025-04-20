@@ -29,6 +29,19 @@ In the data transformation phase, we tuned hyperparameters for RandomForestRegre
 To address class imbalance, we applied Synthetic Minority Oversampling Technique (SMOTE). We then trained and tested classification models, including RandomForestClassifier, GradientBoostingClassifier, LogisticRegression, XGBoostClassifier, and HistGradientBoostingClassifier, comparing results using F1 score, precision, recall, and accuracy.
 
 # Data-Driven Insights and Recommendations
+With the classification model, we understand that ‘City’ has the highest prediction importance at 0.211, followed by ‘Humidity’ (0.151) , ‘Pressure’ (0.149), ‘Temperature’ (0.148), ‘Windspeed’ (0.112), ‘Accident In Previous Hour’ (0.099) and ‘Hour’ (0.058). 
+
+This supports that Los Angeles, Sacramento, San Diego and San Jose would have a significantly higher possibility of accidents relative to other cities. The number of accidents drops sharply after these four cities, making it harder to make definitive predictions for the other cities. 
+
+Next, the series of climate-related metrics that are all interrelated, allude to adverse weather. High humidity is possibly an indicator of precipitation, but the correlation to temperature possibly links to driver comfort as well. 
+
+‘Accidents in Previous Hour’ shows high clustering of accidents, and ‘Hour’ supports our peak hour hypothesis. 
+Therefore, to interpret the outputs exactly as an example, we would be at our highest caution when driving in Los Angeles at 5PM on a Friday, especially when it is raining in the summer and there have been other accidents in the vicinity.
+
+The model also warns that it shows strong predictive accuracy for low and moderate severity accidents, especially severity 1 and 2 — with recall scores of 0.83 and 0.74 respectively. However, it struggles to distinguish between severity 3 and 4 accidents due to overlapping environmental features. This is evident in the confusion matrix where 47% of severity 4 accidents are misclassified. 
+
+Therefore, we have to remember the caveat that while these predictions will help us with general accidents, freak catastrophic accidents can still very much occur in any situation, without following these trends. This keeps us alert and prevents any complacency in driving.
+
 
 # Beyond the Course
 We applied several advanced techniques beyond the typical syllabus to enhance model performance. To address class imbalance, we used the Synthetic Minority Oversampling Technique (SMOTE), which oversamples underrepresented data points to produce more accurate results. For high cardinality categorical data, we implemented target encoding, which accounts for the relationship between categories and the target variable, avoiding the unintended patterns introduced by methods like label encoding.
